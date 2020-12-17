@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Longest Word</title>
+  </head>
+
+  <body>
+    <p id="longest"></p>
+    <script>
+      let info = "Always speak the truth. I like burger";
+      document.getElementById("longest").innerHTML = longestWord(info);
+
+      function longestWord(sentence) {
+        let words = info.split(" ");
+        let length = words.length;
+        let longest = words[0];
+
+        for (i = 0; i < length; i++) {
+          if (words[i].length > longest.length) {
+            longest = words[i];
+          }
+        }
+        return longest;
+      }
+    </script>
+  </body>
+</html>

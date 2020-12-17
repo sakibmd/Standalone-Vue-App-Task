@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Even Odd Program</title>
+  </head>
+  <body>
+    <p id="app"></p>
+
+    <script>
+      let number = 23;
+
+      document.getElementById("app").innerHTML = isEven(number);
+
+      function isEven(number) {
+        if (number % 2 == 0) {
+          return "The number is Even";
+        } else {
+          return "The number is Odd";
+        }
+      }
+    </script>
+  </body>
+</html>

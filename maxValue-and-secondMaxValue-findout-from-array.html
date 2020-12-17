@@ -1,0 +1,32 @@
+<!-- answer to the question no 2 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Max & Second Max value Findout</title>
+</head>
+
+<body>
+  <p id="max"></p>
+  <p id="second_max"></p>
+
+  <script>
+    var numbers = [10, 8, 6, 15, 25, 75, 96, 35, 26, 14];
+    var max_number = second_max_number = numbers[0];
+
+    var length = numbers.length;
+    for (i = 0; i < length; i++) {
+      if (numbers[i] > max_number) {
+        second_max_number = max_number;
+        max_number = numbers[i];
+      } else if (numbers[i] > second_max_number && numbers[i] < max_number) {
+        second_max_number = numbers[i];
+      }
+    }
+    document.getElementById("max").innerHTML = "Maximun Number is: " + max_number;
+    document.getElementById("second_max").innerHTML = "Second Max Number is: " + second_max_number;
+  </script>
+
+</body>
+</html>
